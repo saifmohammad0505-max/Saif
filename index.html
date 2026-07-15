@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Rimi ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9ecf,#ffe9f4);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+width:90%;
+max-width:420px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+h2{
+color:#ff2d75;
+}
+
+button{
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#ff2d75;
+color:white;
+cursor:pointer;
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+<h2 id="title">Hi Rimi ❤️</h2>
+<p id="text">I made something special for you.</p>
+<button onclick="next()">Continue</button>
+</div>
+
+<script>
+
+let step=0;
+
+function next(){
+
+step++;
+
+if(step==1){
+title.innerHTML="Question 1";
+text.innerHTML="Will you spend a few minutes reading this?";
+}
+
+else if(step==2){
+title.innerHTML="Question 2";
+text.innerHTML="Can I share something from my heart?";
+}
+
+else if(step==3){
+title.innerHTML="Question 3";
+text.innerHTML="Thank you for reading this far. It means a lot to me.";
+}
+
+else if(step==4){
+title.innerHTML="❤️ Final Message ❤️";
+text.innerHTML="Rimi, I just wanted you to know that I appreciate you and enjoy talking with you. I don't expect anything from you, and I respect your choices. I simply wanted to share my feelings honestly and wish you happiness and peace.";
+document.querySelector("button").innerHTML="❤️ Thank You ❤️";
+}
+
+else{
+document.querySelector("button").style.display="none";
+}
+
+}
+
+</script>
+
+</body>
+</html>
